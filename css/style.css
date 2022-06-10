@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(72, 71, 71);
+    /* background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(129, 129, 129, 1) 100%, rgba(0, 212, 255, 1) 100%); */
+
+
+}
+
+/* layout principal */
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.2fr 0.2fr;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+
+
+}
+
+
+/* header */
+
+header {
+    grid-area: header;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #00a087;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+
+}
+
+.nav-item a:hover {
+    color: rgb(2, 2, 171) !important;
+    font-size: 1.4rem;
+}
+
+/* para mover los li en el menu hamburguesa*/
+.nav-item {
+    padding-right: 0.5rem;
+}
+
+
+
+/* main */
+
+main {
+    padding-top: 9rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr 1.1fr 1fr 2fr;
+    /* 80px 1.5fr 1.3fr 1fr 2fr */
+
+    grid-template-areas: "titulo1 titulo1"
+        "camiseta1 camiseta1"
+        "camiseta2 camiseta3"
+        "titulo2 titulo2"
+        "parrafo1 parrafo1";
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.titulo1 {
+    grid-area: titulo1;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+
+}
+
+.titulo1 h1 {
+    font-size: 3.2rem;
+    color: rgb(121, 216, 253);
+}
+
+
+.camiseta1 {
+    grid-area: camiseta1;
+}
+
+.camiseta1 img {
+    width: 100%;
+
+}
+
+
+.camiseta2 {
+    grid-area: camiseta2;
+}
+
+.camiseta2 img {
+    width: 100%;
+}
+
+.camiseta3 {
+    grid-area: camiseta3;
+}
+
+.camiseta3 img {
+    width: 100%;
+}
+
+
+.titulo2 {
+    background-color: rgb(121, 216, 253);
+    grid-area: titulo2;
+    text-align: center;
+    color: white;
+    width: 100%;
+    align-self: center;
+}
+
+.titulo2 h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: rgb(72, 71, 71);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.parrafo1 {
+    grid-area: parrafo1;
+    color: white;
+}
+
+.parrafo1 p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: black;
+    grid-area: footer;
+    color: white;
+    padding: 1rem;
+}
+
+.pie-de-pagina {
+    display: grid;
+    grid-template-areas:
+        "redes"
+        "copy";
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes-sociales a {
+    color: white;
+    font-size: 2rem;
+}
+
+.redes-sociales a:hover {
+    color: rgb(121, 216, 253);
+    ;
+}
+
+.copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy p {
+    font-size: 1rem;
+}
+
+
+/* mq */
+
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 1.3fr 1.1fr 150px 450px;   
+    }
+    
+    .titulo1 h1 {
+        font-size: 6.4rem;
+        
+    }
+
+    .titulo2 h2 {
+        font-size: 4.4rem;
+        font-weight: normal;
+    }
+
+    .parrafo1 p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 345px 1.3fr 1.1fr 150px 450px;   
+    }
+    
+    .titulo1 h1 {
+        font-size: 10rem;
+        
+    }
+
+    .titulo2 h2 {
+        font-size: 4.6rem;
+        font-weight: normal;
+    }
+
+    .parrafo1 p {
+        padding: none;
+        font-size: 2.3rem;
+        text-align: center;
+       
+    }
+}
