@@ -40,9 +40,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9;
     width: 100%;
-    background-color: #00a087;
 }
 
 .navbar {
@@ -79,8 +78,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1.3fr 1.1fr 1fr 2fr;
-    /* 80px 1.5fr 1.3fr 1fr 2fr */
-
     grid-template-areas: "titulo1 titulo1"
         "camiseta1 camiseta1"
         "camiseta2 camiseta3"
@@ -215,12 +212,12 @@ footer {
 @media screen and (min-width: 600px) {
     main {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 1.3fr 1.1fr 150px 450px;   
+        grid-template-rows: 250px 1.3fr 1.1fr 150px 450px;
     }
-    
+
     .titulo1 h1 {
         font-size: 6.4rem;
-        
+
     }
 
     .titulo2 h2 {
@@ -235,16 +232,16 @@ footer {
     }
 }
 
-@media screen and (min-width: 992px){
-    
+@media screen and (min-width: 992px) {
+
     main {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 345px 1.3fr 1.1fr 150px 450px;   
+        grid-template-rows: 345px 1.3fr 1.1fr 150px 450px;
     }
-    
+
     .titulo1 h1 {
         font-size: 10rem;
-        
+
     }
 
     .titulo2 h2 {
@@ -256,6 +253,6 @@ footer {
         padding: none;
         font-size: 2.3rem;
         text-align: center;
-       
+
     }
 }

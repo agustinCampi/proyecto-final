@@ -1,3 +1,4 @@
+/* reset */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 * {
@@ -7,9 +8,7 @@
   font-family: 'Roboto', sans-serif; }
 
 body {
-  background-color: #484747;
-  /* background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(129, 129, 129, 1) 100%, rgba(0, 212, 255, 1) 100%); */ }
+  background-color: #484747; }
 
 /* layout principal */
 .contenedor {
@@ -18,3 +17,598 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 1.2fr 0.2fr;
   grid-template-areas: "header" "main" "footer"; }
+
+/* estilos de Inicio*/
+/*header*/
+header {
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%; }
+  header .navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none; }
+    header .navbar li a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: black; }
+  header .nav-item a:hover {
+    color: #0202ab !important;
+    font-size: 1.4rem; }
+  header .nav-item {
+    padding-right: 0.5rem; }
+
+/*main*/
+main {
+  padding-top: 9rem;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.3fr 1.1fr 1fr 2fr;
+  grid-template-areas: "titulo1 titulo1" "camiseta1 camiseta1" "camiseta2 camiseta3" "titulo2 titulo2" "parrafo1 parrafo1";
+  justify-content: center;
+  justify-items: center; }
+  main .titulo1 {
+    grid-area: titulo1;
+    text-align: center;
+    align-self: center;
+    width: 100%; }
+    main .titulo1 h1 {
+      font-size: 3.2rem;
+      color: #79d8fd; }
+  main .camiseta1 {
+    grid-area: camiseta1; }
+    main .camiseta1 img {
+      width: 100%; }
+  main .camiseta2 {
+    grid-area: camiseta2; }
+    main .camiseta2 img {
+      width: 100%; }
+  main .camiseta3 {
+    grid-area: camiseta3; }
+    main .camiseta3 img {
+      width: 100%; }
+  main .titulo2 {
+    background-color: #79d8fd;
+    grid-area: titulo2;
+    text-align: center;
+    color: white;
+    width: 100%;
+    align-self: center; }
+    main .titulo2 h2 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #484747;
+      margin-top: 1rem;
+      text-align: center; }
+  main .parrafo1 {
+    grid-area: parrafo1;
+    color: white; }
+    main .parrafo1 p {
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem; }
+
+/*footer*/
+footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  padding: 1rem; }
+  footer .pie-de-pagina {
+    display: grid;
+    grid-template-areas: "redes" "copy";
+    justify-content: center;
+    align-items: center; }
+  footer .redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around; }
+  footer .redes-sociales a {
+    color: white;
+    font-size: 2rem; }
+  footer .redes-sociales a:hover {
+    color: #79d8fd; }
+  footer .copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer .copy p {
+      font-size: 1rem; }
+
+/* mq */
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-rows: 250px 1.3fr 1.1fr 150px 350px; }
+    main .titulo1 h1 {
+      font-size: 6.4rem; }
+    main .titulo2 h2 {
+      font-size: 4.2rem;
+      font-weight: normal; }
+    main .parrafo1 p {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 1rem; } }
+
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-rows: 230px 1.2fr 1fr 130px 330px; }
+    main .titulo1 h1 {
+      font-size: 6.8rem; }
+    main .titulo2 h2 {
+      font-size: 4.6rem;
+      font-weight: normal; }
+    main .parrafo1 p {
+      padding: none;
+      font-size: 1.9rem;
+      text-align: center; } }
+
+/* PRODUCTOS*/
+/*header*/
+header {
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%; }
+  header .navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none; }
+    header .navbar li a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: black; }
+  header .nav-item a:hover {
+    color: #0202ab !important;
+    font-size: 1.4rem; }
+  header .nav-item {
+    padding-right: 0.5rem; }
+
+/*main productos*/
+.mainp {
+  padding-top: 9rem;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 6fr;
+  grid-template-areas: "titulo1p titulo1p" "parrafo1p parrafo1p" "tarjetas tarjetas";
+  justify-content: center;
+  justify-items: center; }
+  .mainp .titulo1-productos {
+    color: #79d8fd;
+    grid-area: titulo1p;
+    text-align: center;
+    align-self: center;
+    height: 100%;
+    margin-top: 3rem; }
+    .mainp .titulo1-productos h1 {
+      font-size: 3.2rem;
+      height: 100%; }
+  .mainp .parrafo1-productos {
+    color: white;
+    grid-area: parrafo1p;
+    background-color: black;
+    width: 100%; }
+    .mainp .parrafo1-productos p {
+      padding: 1rem;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 1rem;
+      width: 100%; }
+  .mainp .tarjetas {
+    grid-area: tarjetas;
+    width: 95%; }
+  .mainp .card {
+    margin: 0.5rem; }
+
+/*footer*/
+footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  padding: 1rem; }
+  footer .pie-de-pagina {
+    display: grid;
+    grid-template-areas: "redes" "copy";
+    justify-content: center;
+    align-items: center; }
+  footer .redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around; }
+  footer .redes-sociales a {
+    color: white;
+    font-size: 2rem; }
+  footer .redes-sociales a:hover {
+    color: #79d8fd; }
+  footer .copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer .copy p {
+      font-size: 1rem; }
+
+/* mq */
+@media screen and (min-width: 600px) {
+  .mainp {
+    grid-template-rows: 0.4fr 0.4fr 8fr; }
+    .mainp .titulo1-productos h1 {
+      font-size: 6.4rem; }
+    .mainp .parrafo1-productos p {
+      font-size: 2.8rem; } }
+
+@media screen and (min-width: 768px) {
+  .mainp {
+    grid-template-rows: 0.4fr 0.4fr 2fr; } }
+
+@media screen and (min-width: 992px) {
+  .mainp {
+    grid-template-rows: 0.3fr 0.4fr 2fr;
+    padding-top: 7rem; }
+    .mainp .titulo1-productos h1 {
+      font-size: 6.8rem; }
+    .mainp .parrafo1-productos p {
+      font-size: 3rem; } }
+
+/* OFERTAS*/
+/*header*/
+header {
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%; }
+  header .navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none; }
+    header .navbar li a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: black; }
+  header .nav-item a:hover {
+    color: #0202ab !important;
+    font-size: 1.4rem; }
+  header .nav-item {
+    padding-right: 0.5rem; }
+
+/*main ofertas*/
+.mainOfertas {
+  padding-top: 9rem;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 6fr;
+  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "tarjetas tarjetas";
+  justify-content: center;
+  justify-items: center; }
+  .mainOfertas .titulo1-ofertas {
+    color: #79d8fd;
+    grid-area: titulo1;
+    text-align: center;
+    align-self: center;
+    height: 100%;
+    margin-top: 0rem;
+    background-color: black;
+    width: 100%; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 3.2rem;
+      height: 100%; }
+  .mainOfertas .parrafo1-ofertas {
+    color: black;
+    grid-area: parrafo1;
+    background-color: #79d8fd;
+    width: 100%; }
+    .mainOfertas .parrafo1-ofertas p {
+      padding: 1rem;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 1rem;
+      width: 100%; }
+  .mainOfertas .tarjetas {
+    grid-area: tarjetas;
+    width: 95%; }
+  .mainOfertas .card {
+    margin: 0.5rem; }
+
+/*footer*/
+footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  padding: 1rem; }
+  footer .pie-de-pagina {
+    display: grid;
+    grid-template-areas: "redes" "copy";
+    justify-content: center;
+    align-items: center; }
+  footer .redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around; }
+  footer .redes-sociales a {
+    color: white;
+    font-size: 2rem; }
+  footer .redes-sociales a:hover {
+    color: #79d8fd; }
+  footer .copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer .copy p {
+      font-size: 1rem; }
+
+/* mq */
+@media screen and (min-width: 600px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 8fr; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 6.2rem; }
+    .mainOfertas .parrafo1-ofertas p {
+      font-size: 2.8rem; } }
+
+@media screen and (min-width: 768px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 2.4fr; } }
+
+@media screen and (min-width: 992px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 2.8fr; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 6.8rem; }
+    .mainOfertas .parrafo1-ofertas p {
+      font-size: 3rem; } }
+
+/* CONTACTO*/
+/*header*/
+header {
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%; }
+  header .navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none; }
+    header .navbar li a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: black; }
+  header .nav-item a:hover {
+    color: #0202ab !important;
+    font-size: 1.4rem; }
+  header .nav-item {
+    padding-right: 0.5rem; }
+
+/*main contacto*/
+.mainContacto {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.05fr 3.1fr;
+  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "form form";
+  justify-content: center;
+  justify-items: center;
+  background-color: black; }
+  .mainContacto .titulo1-contacto {
+    color: white;
+    grid-area: titulo1;
+    text-align: start;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem; }
+    .mainContacto .titulo1-contacto h1 {
+      font-size: 2.8rem;
+      height: 100%; }
+  .mainContacto .parrafo1-contacto {
+    color: black;
+    grid-area: parrafo1;
+    background-color: #79d8fd;
+    width: 100%; }
+    .mainContacto .parrafo1-contacto p {
+      padding: 1rem;
+      font-size: 1.3rem;
+      text-align: start;
+      margin-top: 1rem;
+      width: 100%; }
+  .mainContacto .formulario {
+    grid-area: form;
+    background-color: #484747;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 4rem; }
+    .mainContacto .formulario form {
+      width: 92%;
+      color: #79d8fd; }
+
+/*footer*/
+footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  padding: 1rem; }
+  footer .pie-de-pagina {
+    display: grid;
+    grid-template-areas: "redes" "copy";
+    justify-content: center;
+    align-items: center; }
+  footer .redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around; }
+  footer .redes-sociales a {
+    color: white;
+    font-size: 2rem; }
+  footer .redes-sociales a:hover {
+    color: #79d8fd; }
+  footer .copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer .copy p {
+      font-size: 1rem; }
+
+/* mq */
+@media screen and (min-width: 600px) {
+  .mainContacto {
+    grid-template-rows: 0.4fr 0.4fr 2fr; }
+    .mainContacto .titulo1-contacto h1 {
+      font-size: 6.2rem; }
+    .mainContacto .parrafo1-contacto p {
+      font-size: 1.5rem; } }
+
+@media screen and (min-width: 768px) {
+  .mainContacto {
+    grid-template-rows: 0.6fr 0.7fr 3fr; }
+    .mainContacto .titulo1-contacto h1 {
+      font-size: 4.5rem;
+      padding-top: 0.3rem; }
+    .mainContacto .parrafo1-contacto p {
+      font-size: 2rem; }
+    .mainContacto .formulario form {
+      width: 93%; } }
+
+@media screen and (min-width: 1571px) {
+  .mainContacto {
+    grid-template-rows: 0.8fr 0.4fr 4.8fr; }
+    .mainContacto .formulario {
+      padding-top: 3rem; }
+      .mainContacto .formulario form {
+        width: 95%; } }
+
+/* NOSOTROS*/
+/*header*/
+header {
+  grid-area: header;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%; }
+  header .navbar {
+    display: flex;
+    align-items: flex-end;
+    list-style: none; }
+    header .navbar li a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: black; }
+  header .nav-item a:hover {
+    color: #0202ab !important;
+    font-size: 1.4rem; }
+  header .nav-item {
+    padding-right: 0.5rem; }
+
+/*main nosotros*/
+.mainOfertas {
+  padding-top: 9rem;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 6fr;
+  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "tarjetas tarjetas";
+  justify-content: center;
+  justify-items: center; }
+  .mainOfertas .titulo1-ofertas {
+    color: #79d8fd;
+    grid-area: titulo1;
+    text-align: center;
+    align-self: center;
+    height: 100%;
+    margin-top: 0rem;
+    background-color: black;
+    width: 100%; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 3.2rem;
+      height: 100%; }
+  .mainOfertas .parrafo1-ofertas {
+    color: black;
+    grid-area: parrafo1;
+    background-color: #79d8fd;
+    width: 100%; }
+    .mainOfertas .parrafo1-ofertas p {
+      padding: 1rem;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 1rem;
+      width: 100%; }
+  .mainOfertas .tarjetas {
+    grid-area: tarjetas;
+    width: 95%; }
+  .mainOfertas .card {
+    margin: 0.5rem; }
+
+/*footer*/
+footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  padding: 1rem; }
+  footer .pie-de-pagina {
+    display: grid;
+    grid-template-areas: "redes" "copy";
+    justify-content: center;
+    align-items: center; }
+  footer .redes-sociales {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around; }
+  footer .redes-sociales a {
+    color: white;
+    font-size: 2rem; }
+  footer .redes-sociales a:hover {
+    color: #79d8fd; }
+  footer .copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer .copy p {
+      font-size: 1rem; }
+
+/* mq */
+@media screen and (min-width: 600px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 8fr; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 6.2rem; }
+    .mainOfertas .parrafo1-ofertas p {
+      font-size: 2.8rem; } }
+
+@media screen and (min-width: 768px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 2.4fr; } }
+
+@media screen and (min-width: 992px) {
+  .mainOfertas {
+    grid-template-rows: 0.4fr 0.4fr 2.8fr; }
+    .mainOfertas .titulo1-ofertas h1 {
+      font-size: 6.8rem; }
+    .mainOfertas .parrafo1-ofertas p {
+      font-size: 3rem; } }

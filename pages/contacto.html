@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- palabras claves -->
+    <meta name="description" content="Pagina contacto de Bv Sports">
+    <meta name="keywords" content="Contacto, consulta, email, nombre, formulario">
     <!-- link de bootstrap -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link de mi css -->
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Contacto - Bv Sports</title>
 </head>
 
 <body>
@@ -47,8 +50,37 @@
 
         </header>
 
-        <main>
+        <main class="mainContacto">
+            <div class="titulo1-contacto">
+                <h1> CONTACTO</h1>
+            </div>
 
+            <div class="parrafo1-contacto">
+                <p> Aqui debajo dejamos un formulario de contacto para aquellas personas que quieran hacernos una
+                    consulta.
+                </p>
+            </div>
+            <div class="formulario">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Nombre y Apellido</label>
+                      <input type="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe aqui">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Celular</label>
+                      <input type="celular" class="form-control" id="exampleInputPassword1" placeholder="Escribe aqui">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Escribe aqui">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Tu consulta</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Escribe aqui" rows="3"></textarea>
+                      </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>            
+            </div>
         </main>
 
         <footer>
