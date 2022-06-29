@@ -48,7 +48,7 @@ main {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1.3fr 1.1fr 1fr 2fr;
+  grid-template-rows: 1fr 1.3fr 1.1fr 1fr 1.4fr;
   grid-template-areas: "titulo1 titulo1" "camiseta1 camiseta1" "camiseta2 camiseta3" "titulo2 titulo2" "parrafo1 parrafo1";
   justify-content: center;
   justify-items: center; }
@@ -90,7 +90,7 @@ main {
     color: white; }
     main .parrafo1 p {
       padding: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       text-align: center;
       margin-top: 1rem; }
 
@@ -126,14 +126,14 @@ footer {
 /* mq */
 @media screen and (min-width: 600px) {
   main {
-    grid-template-rows: 250px 1.3fr 1.1fr 150px 350px; }
+    grid-template-rows: 250px 1.3fr 1.1fr 150px 290px; }
     main .titulo1 h1 {
       font-size: 6.4rem; }
     main .titulo2 h2 {
       font-size: 4.2rem;
       font-weight: normal; }
     main .parrafo1 p {
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-align: center;
       margin-top: 1rem; } }
 
@@ -147,7 +147,7 @@ footer {
       font-weight: normal; }
     main .parrafo1 p {
       padding: none;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       text-align: center; } }
 
 /* PRODUCTOS*/
@@ -477,7 +477,7 @@ footer {
   .mainContacto {
     grid-template-rows: 0.4fr 0.4fr 2fr; }
     .mainContacto .titulo1-contacto h1 {
-      font-size: 6.2rem; }
+      font-size: 3.2rem; }
     .mainContacto .parrafo1-contacto p {
       font-size: 1.5rem; } }
 
@@ -525,43 +525,62 @@ header {
     padding-right: 0.5rem; }
 
 /*main nosotros*/
-.mainOfertas {
-  padding-top: 9rem;
+.mainNosotros {
+  padding-top: 7.9rem;
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 0.2fr 6fr;
-  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "tarjetas tarjetas";
+  grid-template-rows: 0.3fr 1fr 2.5fr;
+  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "mapa mapa";
   justify-content: center;
   justify-items: center; }
-  .mainOfertas .titulo1-ofertas {
-    color: #79d8fd;
+  .mainNosotros .titulo1-nosotros {
+    color: white;
     grid-area: titulo1;
-    text-align: center;
+    text-align: start;
     align-self: center;
     height: 100%;
-    margin-top: 0rem;
-    background-color: black;
-    width: 100%; }
-    .mainOfertas .titulo1-ofertas h1 {
-      font-size: 3.2rem;
-      height: 100%; }
-  .mainOfertas .parrafo1-ofertas {
+    width: 100%;
+    padding-left: 1rem;
+    background-color: black; }
+    .mainNosotros .titulo1-nosotros h1 {
+      font-size: 2.8rem;
+      height: 100%;
+      padding-top: 1rem; }
+  .mainNosotros .parrafo1-nosotros {
     color: black;
     grid-area: parrafo1;
     background-color: #79d8fd;
     width: 100%; }
-    .mainOfertas .parrafo1-ofertas p {
+    .mainNosotros .parrafo1-nosotros h2 {
+      font-size: 2rem;
+      padding-top: 1rem;
+      padding-left: 1rem; }
+    .mainNosotros .parrafo1-nosotros p {
       padding: 1rem;
       font-size: 1.4rem;
-      text-align: center;
+      text-align: start;
       margin-top: 1rem;
-      width: 100%; }
-  .mainOfertas .tarjetas {
-    grid-area: tarjetas;
-    width: 95%; }
-  .mainOfertas .card {
-    margin: 0.5rem; }
+      padding-left: 2rem; }
+  .mainNosotros .mapa {
+    grid-area: mapa;
+    height: 100%;
+    width: 100%; }
+    .mainNosotros .mapa h3 {
+      color: #79d8fd;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      padding-left: 1rem; }
+    .mainNosotros .mapa p {
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: start;
+      margin-top: 1rem;
+      padding-left: 2rem;
+      color: #79d8fd; }
+    .mainNosotros .mapa img {
+      width: 100%;
+      padding-bottom: 1rem; }
 
 /*footer*/
 footer {
@@ -594,21 +613,60 @@ footer {
 
 /* mq */
 @media screen and (min-width: 600px) {
-  .mainOfertas {
-    grid-template-rows: 0.4fr 0.4fr 8fr; }
-    .mainOfertas .titulo1-ofertas h1 {
-      font-size: 6.2rem; }
-    .mainOfertas .parrafo1-ofertas p {
-      font-size: 2.8rem; } }
+  .mainNosotros {
+    grid-template-rows: 0.4fr 1.2fr 3fr; }
+    .mainNosotros .titulo1-nosotros h1 {
+      font-size: 3.5rem; }
+    .mainNosotros .parrafo1-nosotros h2 {
+      font-size: 2.4rem; }
+    .mainNosotros .parrafo1-nosotros p {
+      font-size: 1.8rem; }
+    .mainNosotros .mapa h3 {
+      font-size: 1.9rem; }
+    .mainNosotros .mapa p {
+      font-size: 1.6rem; } }
 
 @media screen and (min-width: 768px) {
-  .mainOfertas {
-    grid-template-rows: 0.4fr 0.4fr 2.4fr; } }
+  .mainNosotros {
+    grid-template-rows: 0.3fr 1fr 3.2fr; }
+    .mainNosotros .titulo1-nosotros h1 {
+      font-size: 4rem; }
+    .mainNosotros .parrafo1-nosotros h2 {
+      font-size: 2.9rem; }
+    .mainNosotros .parrafo1-nosotros p {
+      font-size: 2.2rem; }
+    .mainNosotros .mapa h3 {
+      font-size: 2rem; }
+    .mainNosotros .mapa p {
+      font-size: 1.8rem; } }
 
 @media screen and (min-width: 992px) {
-  .mainOfertas {
-    grid-template-rows: 0.4fr 0.4fr 2.8fr; }
-    .mainOfertas .titulo1-ofertas h1 {
-      font-size: 6.8rem; }
-    .mainOfertas .parrafo1-ofertas p {
-      font-size: 3rem; } }
+  .mainNosotros {
+    grid-template-rows: 0.3fr 0.4fr 2.6fr; }
+    .mainNosotros .titulo1-nosotros h1 {
+      font-size: 4.5rem; }
+    .mainNosotros .parrafo1-nosotros h2 {
+      font-size: 3.1rem; }
+    .mainNosotros .parrafo1-nosotros p {
+      font-size: 2.4rem; }
+    .mainNosotros .mapa h3 {
+      font-size: 2.2rem; }
+    .mainNosotros .mapa p {
+      font-size: 2rem; }
+    .mainNosotros .mapa img {
+      width: 500px;
+      padding-left: 3rem; } }
+
+@media screen and (min-width: 1500px) {
+  .mainNosotros {
+    grid-template-rows: 0.3fr 0.6fr; }
+    .mainNosotros .titulo1-nosotros h1 {
+      font-size: 5rem; }
+    .mainNosotros .parrafo1-nosotros h2 {
+      font-size: 3.1rem; }
+    .mainNosotros .parrafo1-nosotros p {
+      font-size: 2.4rem; }
+    .mainNosotros .mapa h3 {
+      font-size: 2.3rem; }
+    .mainNosotros .mapa p {
+      font-size: 2.1rem; } }
