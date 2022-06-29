@@ -1,0 +1,79 @@
+@mixin flex{
+    display:flex;
+}
+
+@mixin header{
+    grid-area: header;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    .navbar {
+        display: flex;
+        align-items: flex-end;
+        list-style: none;
+        li{
+            a{
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: black;
+            }
+        }
+    }
+    .nav-item a:hover {
+        color: rgb(2, 2, 171) !important;
+        font-size: 1.4rem;
+    }
+    .nav-item {
+        padding-right: 0.5rem;
+    }
+}
+
+@mixin footer{
+   
+    background-color: black;
+    grid-area: footer;
+    color: white;
+    padding: 1rem; 
+    
+    .pie-de-pagina {
+        display: grid;
+        grid-template-areas:
+            "redes"
+            "copy";
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .redes-sociales {
+        grid-area: redes;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .redes-sociales a {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .redes-sociales a:hover {
+        color: rgb(121, 216, 253);
+        ;
+    }
+    
+    .copy {
+        grid-area: copy;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 1rem;
+        }
+    }
+    
+    
+}
+    

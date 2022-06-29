@@ -1,0 +1,134 @@
+/* estilos de Inicio*/
+/*header*/
+header{
+    @include header
+}
+/*main*/
+main {
+    padding-top: 9rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr 1.1fr 1fr 2fr;
+    grid-template-areas: "titulo1 titulo1"
+        "camiseta1 camiseta1"
+        "camiseta2 camiseta3"
+        "titulo2 titulo2"
+        "parrafo1 parrafo1";
+    justify-content: center;
+    justify-items: center;
+
+    .titulo1 {
+        grid-area: titulo1;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        h1{
+            font-size: 3.2rem;
+    color: $color-1;
+        }
+    
+    }
+    .camiseta1 {
+        grid-area: camiseta1;
+        img{
+            width: 100%;
+        }
+    }
+    .camiseta2 {
+        grid-area: camiseta2;
+        img{
+            width: 100%;
+        }
+    }
+    .camiseta3 {
+        grid-area: camiseta3;
+        img{
+            width: 100%;
+        }
+    }
+    .titulo2 {
+        background-color: rgb(121, 216, 253);
+        grid-area: titulo2;
+        text-align: center;
+        color: white;
+        width: 100%;
+        align-self: center;
+        h2{
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: rgb(72, 71, 71);
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+    .parrafo1 {
+        grid-area: parrafo1;
+        color: white;
+        p{
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+/*footer*/
+
+footer{
+    @include footer
+}
+
+/* mq */
+
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-rows: 250px 1.3fr 1.1fr 150px 350px;
+        .titulo1{
+            h1 {
+                font-size: 6.4rem;
+            }
+        }    
+        .titulo2{
+            h2{
+                font-size: 4.2rem;
+                font-weight: normal;
+            }
+        }
+        .parrafo1{
+            p{
+                font-size: 1.5rem;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+        
+        
+    }    
+}
+
+@media screen and (min-width: 992px) {
+
+    main {
+        grid-template-rows: 230px 1.2fr 1fr 130px 330px;
+        .titulo1{
+            h1{
+                font-size: 6.8rem;
+            }
+        }
+        .titulo2{
+            h2{
+                font-size: 4.6rem;
+                font-weight: normal;
+            }
+        }
+        .parrafo1{
+            p{
+                padding: none;
+                font-size: 1.9rem;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+/* PRODUCTOS*/
+/*header*/
+header{
+    @include header
+}
+/*main productos*/
+
+
+.mainp {
+    padding-top: 9rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 6fr;
+    grid-template-areas: "titulo1p titulo1p"
+        "parrafo1p parrafo1p"
+        "tarjetas tarjetas";
+    justify-content: center;
+    justify-items: center;
+    
+
+    .titulo1-productos{
+        color: $color-1;
+        grid-area: titulo1p;
+        text-align: center;
+        align-self: center;
+        height: 100%;
+        margin-top: 3rem;
+        h1{
+            font-size: 3.2rem;
+            height: 100%;
+        }
+    }
+    
+    .parrafo1-productos{
+        color: $color-2;
+        grid-area: parrafo1p;
+        background-color: black;
+        width: 100%;
+        p{
+            padding: 1rem;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-top: 1rem;
+            width: 100%;
+        }
+         
+    }
+    
+    .tarjetas{
+        grid-area: tarjetas;
+        width: 95%;
+    }
+
+    .card{
+        margin: 0.5rem;
+    }
+}
+
+/*footer*/
+
+footer{
+    @include footer
+}
+
+/* mq */
+
+@media screen and (min-width: 600px) {
+    .mainp {
+        grid-template-rows: 0.4fr 0.4fr 8fr;
+        .titulo1-productos h1{ 
+            font-size: 6.4rem;
+        } 
+        .parrafo1-productos{
+            p{
+                font-size: 2.8rem;
+            }
+        }
+    }    
+        
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    .mainp {
+        grid-template-rows: 0.4fr 0.4fr 2fr;
+    }    
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+    .mainp {
+        grid-template-rows: 0.3fr 0.4fr 2fr;
+        padding-top: 7rem;
+        .titulo1-productos h1{ 
+            font-size: 6.8rem;
+        } 
+        .parrafo1-productos{
+            p{
+                font-size: 3rem;
+            }
+        }
+    }    
+        
+    
+    
+}
+

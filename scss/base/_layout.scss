@@ -1,0 +1,10 @@
+/* layout principal */
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.2fr 0.2fr;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
